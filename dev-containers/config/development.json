@@ -1,0 +1,54 @@
+{
+        "appenders": {
+            "access": {
+                "type":     "dateFile",
+                "filename": "./log/access.log"
+            },
+            "error": {
+                "type":     "dateFile",
+                "filename": "./log/error.log"
+            },
+            "system": {
+                "type":     "dateFile",
+                "filename": "./log/system.log"
+            },
+            "console": {
+                "type": "console"
+            },
+            "stdout": {
+              "type": "stdout"
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": [
+                    "access"
+                    ,"console"
+                    ,"stdout"
+                ]
+                ,"level": "INFO"
+            },
+            "access": {
+                "appenders": [
+                  "stdout"
+                ]
+                ,"level": "INFO"
+            },
+            "system": {
+                "appenders": [
+                    "system"
+                    ,"console"
+                    ,"stdout"
+                ]
+                ,"level": "ALL"
+            },
+            "error": {
+                "appenders": [
+                    "error"
+                    ,"console"
+                    ,"stdout"
+                ]
+                ,"level": "WARN"
+            }
+        }
+  }
